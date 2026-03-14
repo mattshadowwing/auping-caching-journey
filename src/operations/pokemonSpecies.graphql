@@ -1,0 +1,12 @@
+query PokemonSpecies {
+  pokemon_v2_pokemonspecies(limit: 100) {
+    id
+    name
+    base_happiness
+    capture_rate
+    is_legendary
+    is_mythical
+    evolution_chain_id
+    generation_id
+  }
+}

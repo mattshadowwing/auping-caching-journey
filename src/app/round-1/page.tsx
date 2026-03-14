@@ -1,30 +1,33 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { ServerPokemonList } from "@/components/ServerPokemonList";
 import { ClientPokemonList } from "@/components/ClientPokemonList";
 
 // Force static generation - full page cache
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
-export default function Home() {
+export default function Round1() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
           <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
-            Default Page - SSR No Caching
+            Round 1 - Full Page SSG
           </h1>
-          <div className="rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
-            <h2 className="mb-2 text-lg font-semibold text-blue-900 dark:text-blue-100">
+          <div className="rounded-lg bg-green-50 p-4 dark:bg-green-900/20">
+            <h2 className="mb-2 text-lg font-semibold text-green-900 dark:text-green-100">
               Caching Strategy
             </h2>
-            <p className="text-sm text-blue-700 dark:text-blue-300">
-              • <code className="rounded bg-blue-100 px-1 py-0.5 dark:bg-blue-800">
-                dynamic = &quot;force-dynamic&quot;
+            <p className="text-sm text-green-700 dark:text-green-300">
+              • <code className="rounded bg-green-100 px-1 py-0.5 dark:bg-green-800">
+                dynamic = &quot;force-static&quot;
               </code>
               <br />
-              • No caching at all - fresh data on every page load
-              <br />• Both server and client components fetch on each request
+              • Full page is statically generated at build time
+              <br />
+              • Server component data is baked into the HTML
+              <br />• Client component fetches on first client render (then cached by Apollo on browser session)
             </p>
           </div>
 
@@ -32,13 +35,13 @@ export default function Home() {
           <nav className="mt-4 flex flex-wrap gap-2">
             <Link
               href="/"
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white"
+              className="rounded-lg bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
             >
               Default
             </Link>
             <Link
               href="/round-1"
-              className="rounded-lg bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+              className="rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white"
             >
               Round 1
             </Link>
