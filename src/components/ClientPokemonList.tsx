@@ -40,7 +40,7 @@ export function ClientPokemonList() {
               </div>
             </div>
 
-            <div className="mb-4 flex h-24 items-center justify-center rounded-md bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-700 dark:to-gray-600">
+            <div className="mb-4 flex h-24 items-center justify-center rounded-md bg-linear-to-br from-purple-50 to-pink-100 dark:from-gray-700 dark:to-gray-600">
               <div className="text-4xl">
                 {sp.is_legendary ? "👑" : sp.is_mythical ? "🌟" : "🔮"}
               </div>

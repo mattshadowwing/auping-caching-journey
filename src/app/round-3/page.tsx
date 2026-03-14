@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Link from "next/link";
 import { ServerPokemonListAction } from "@/components/ServerPokemonListAction";
 import { ClientPokemonListAction } from "@/components/ClientPokemonListAction";

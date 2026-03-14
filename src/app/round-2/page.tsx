@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Link from "next/link";
 import { ServerPokemonListCached } from "@/components/ServerPokemonListCached";
 import { ClientPokemonList } from "@/components/ClientPokemonList";

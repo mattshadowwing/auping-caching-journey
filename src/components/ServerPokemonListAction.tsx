@@ -30,7 +30,7 @@ export async function ServerPokemonListAction() {
               )}
             </div>
 
-            <div className="mb-4 flex h-24 items-center justify-center rounded-md bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-700 dark:to-gray-600">
+            <div className="mb-4 flex h-24 items-center justify-center rounded-md bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-700 dark:to-gray-600">
               <div className="text-4xl">🎮</div>
             </div>
 
