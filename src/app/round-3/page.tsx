@@ -4,6 +4,7 @@ import { ClientPokemonListAction } from "@/components/ClientPokemonListAction";
 
 // Force static generation - full page cache
 export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24;
 
 export default function Round3() {
   return (
